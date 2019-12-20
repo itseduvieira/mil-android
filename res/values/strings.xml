@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Milliways</string>
+    <string name="my_location">Minha localiza\u00E7\u00E3o</string>
+    <string name="provider_disabled_enable_it">O meio de localização [$provider$] está desabilitado</string>
+    <string name="location_could_not_be_determined">N\u00E3o foi possível determinar sua localiza\u00E7\u00E3o.</string>
+    <string name="movie">cinema</string>
+    <string name="bar">bar</string>
+    <string name="theater">teatro</string>
+    <string name="night">balada</string>
+    <string name="refreshing_data">Atualizando dados</string>
+    <string name="initializing">iniciando</string>
+    
+    <string-array name="cities_array">
+        <item>Guarujá, SP</item>
+        <item>Itanhaém, SP</item>
+        <item>Mongaguá, SP</item>
+        <item>Peruibe, SP</item>
+        <item>Praia Grande, SP</item>
+        <item>Santos, SP</item>
+        <item>São Vicente, SP</item>
+    </string-array>
+</resources>

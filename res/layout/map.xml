@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#666666" >
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:paddingTop="5dip"
+        android:paddingBottom="5dip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:background="@drawable/background_header" >
+
+        <Button
+            android:id="@+id/btn_map_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dip"
+            android:background="@drawable/map_mode_selector" />
+
+        <ImageView
+            android:id="@+id/imageheader"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="9"
+            android:src="@drawable/logoheader" />
+
+        <Button
+            android:id="@+id/btn_list_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="5dip"
+            android:background="@drawable/list_mode_selector" />
+    </LinearLayout>
+    
+     <LinearLayout
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/header"
+        android:orientation="vertical" >
+
+        <com.google.android.maps.MapView
+            android:id="@+id/mapview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:apiKey="01qBcW2iIkAA2M8p0rZAB71KW1w-oTN1uR_Iu8g"
+            android:clickable="true" />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/toggle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:padding="2dip"
+        android:background="#80000000" >
+
+        <Button
+            android:id="@+id/toggle_bar"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/bar"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:padding="2dip"
+            android:layout_margin="2dip"
+            android:drawableTop="@drawable/ic_toggle_bar" />
+
+        <Button
+            android:id="@+id/toggle_movie"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/movie"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:padding="2dip"
+            android:layout_margin="2dip"
+            android:drawableTop="@drawable/ic_toggle_movie" />
+
+        <Button
+            android:id="@+id/toggle_night"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/night"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:padding="2dip"
+            android:layout_margin="2dip"
+            android:drawableTop="@drawable/ic_toggle_night" />
+
+        <Button
+            android:id="@+id/toggle_theater"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/theater"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:padding="2dip"
+            android:layout_margin="2dip"
+            android:drawableTop="@drawable/ic_toggle_theater" />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/filters"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toggle"
+        android:padding="2dip"
+        android:visibility="gone"
+        android:background="#80000000"
+        android:orientation="horizontal" >
+        
+        <Button
+            android:id="@+id/btn_date"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="2dip"
+            android:drawableLeft="@android:drawable/ic_menu_agenda"
+            android:text="Quando?" />
+
+        <AutoCompleteTextView
+            android:id="@+id/filter_city"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Onde" />
+
+        <Button
+            android:id="@+id/btn_refresh_filters"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/apply_filters_selector"
+            android:layout_marginRight="2dip" />
+
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/applied_filters"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toggle"
+        android:padding="2dip"
+        android:background="#80000000"
+        android:orientation="horizontal">
+
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A partir de "
+            android:textColor="#FFFFFF"
+            android:layout_marginLeft="2dip" />
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="agora"
+            android:textColor="#FFFFFF" />
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" em "
+            android:textColor="#FFFFFF" />
+        
+        <TextView 
+            android:id="@+id/my_location_filter"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="São Paulo, Brasil"
+            android:textColor="#FFFFFF"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btn_applied_filters"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_filters_selector"
+            android:layout_marginRight="2dip" />
+
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/controls"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:padding="5dip"
+        android:background="#80000000"
+        android:orientation="vertical" >
+
+        <ToggleButton
+            android:id="@+id/btn_show_filters"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:background="@drawable/show_filters_on"
+            android:textOn=""
+            android:textOff="" />
+        
+        <Button
+            android:id="@+id/btn_zoom_in_map"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/zoom_in_selector"
+            android:layout_marginTop="20dip" />
+        
+        <Button
+            android:id="@+id/btn_zoom_out_map"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/zoom_out_selector"
+            android:layout_marginTop="1dip" />
+
+    </LinearLayout>
+</RelativeLayout>
